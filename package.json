@@ -1,0 +1,12 @@
+{
+    "name": "save_tunes",
+    "description: "A node.js script to parse iTunes library xml file and get list of filepaths of tracks for specified playlist.",
+    "version": "0.1.0",
+    "scripts": {
+        "start": "node save_tunes.js"
+    },
+    "dependencies": {
+        "libxmljs": "~0.9.0",
+        "minimist": "~0.1.0"
+    }
+}
