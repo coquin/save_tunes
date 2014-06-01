@@ -19,7 +19,7 @@ if (!playListName) {
 
 fs.readFile(libraryFile, function(err, data) {
     if (err) {
-        console.log("Cannot open iTunes library file.");
+        console.log("Cannot open iTunes library file (iTunes Music Library.xml).");
         return;
     }
 
