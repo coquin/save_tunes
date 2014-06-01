@@ -14,12 +14,12 @@ Script will find a playlist named "Robert Johnson" in your iTunes library, parse
 
     /Users/coquin/Music/iTunes/iTunes\ Media/Music/Robert\ Johnson/A\ Proper\ Introduction\ to\ Robert\ Johnson_\ Cross\ Road\ Blues/01\ Kindhearted\ Woman\ Blues.mp3
     /Users/coquin/Music/iTunes/iTunes\ Media/Music/Robert\ Johnson/A\ Proper\ Introduction\ to\ Robert\ Johnson_\ Cross\ Road\ Blues/02\ I\ Believe\ I\'ll\ Dust\ My\ Broom.mp3
-/Users/coquin/Music/iTunes/iTunes\ Media/Music/Robert\ Johnson/A\ Proper\ Introduction\ to\ Robert\ Johnson_\ Cross\ Road\ Blues/03\ Sweet\ Home\ Chicago.mp3
+    /Users/coquin/Music/iTunes/iTunes\ Media/Music/Robert\ Johnson/A\ Proper\ Introduction\ to\ Robert\ Johnson_\ Cross\ Road\ Blues/03\ Sweet\ Home\ Chicago.mp3
     /Users/coquin/Music/iTunes/iTunes\ Media/Music/Robert\ Johnson/A\ Proper\ Introduction\ to\ Robert\ Johnson_\ Cross\ Road\ Blues/04\ Rambling\ On\ My\ Mind.mp3
     /Users/coquin/Music/iTunes/iTunes\ Media/Music/Robert\ Johnson/A\ Proper\ Introduction\ to\ Robert\ Johnson_\ Cross\ Road\ Blues/05\ When\ You\ Got\ a\ Good\ Friend.mp3
     ...
 
-The main idea is that you can pipe this list (with a little help of xargs utility) to any UNIX terminal utility: `grep`, `cp`, `pbcopy`... For example, I want to copy all tracks from my "Trash Metal" playlist (a bunch of tracks from various artists, which iTunes will store in its crazy way with track filenames put at `artist_name/album_name/track_name.mp3` paths) in a Dropbox folder. This how I do it using this utility:
+The main idea is that you can pipe this list (with a little help of [xargs](http://unixhelp.ed.ac.uk/CGI/man-cgi?xargs) utility) to any UNIX terminal utility: `grep`, `cp`, `pbcopy`... For example, I want to copy all tracks from my "Trash Metal" playlist (a bunch of tracks from various artists, which iTunes will store in its crazy way with track filenames put at `artist_name/album_name/track_name.mp3` paths) in a Dropbox folder. This how I do it using this utility:
 
     node save_tunes.js -p "Trash Metal" | xargs -J % cp -n % ~/Dropbox/Music/
 
